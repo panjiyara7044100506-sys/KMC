@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <div className='app'>
-      <Header currState={currState} />
+      <Header/>
       <Routes>
         <Route path='/' element={<Home currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
         <Route path='/requests' element={<Requests currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
