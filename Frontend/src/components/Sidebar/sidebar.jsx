@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import './sidebar.css'
-import SidebarContext from "../../context/sidebarContext.js";
+
 import { NavLink } from "react-router-dom";
 
 
-function Sidebar({show,setShow}){
+function Sidebar({show,setShow,currState,setCurrState}){
     const Item = [
         {id:1,label:"home",icon:"⌂",path:"/"},
         {id:2,label:"requests",icon:"◫",path:"/requests"},
@@ -13,7 +13,6 @@ function Sidebar({show,setShow}){
         {id:5,label:"community",icon:"♧",path:"/community"},
     ]
 
-    const{currState,setCurrState}=useContext(SidebarContext);
 
     return(
         <div className={show?"sidebar":"active"}>

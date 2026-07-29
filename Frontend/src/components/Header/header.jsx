@@ -1,7 +1,16 @@
 import React from "react";
 import './header.css'
+import { useLocation } from "react-router-dom";
 
 function Header() {
+    const heading={
+        "/":"good morning, alex",
+        "/requests":"requests portal",
+        "/payments":"payments portal",
+        "/permits":"permits portal",
+        "/community":"community portal"
+    }
+    const location = useLocation();
     return (
         <div className="header">
             <div className="header-left-tag">
@@ -16,7 +25,7 @@ function Header() {
                 </div>
                 <div className="header-left">
                     <p>citizen portal</p>
-                    <h1>good morning, alex</h1>
+                    <h1>{heading[location.pathname]}</h1>
                 </div>
             </div>
             <div className="header-right">

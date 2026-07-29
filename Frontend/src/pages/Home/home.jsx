@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import './home.css'
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
 
-function Home(){
+function Home({currState,setCurrState}){
     const[show,setShow]=useState(false);
     
     return(
         <div className="home">
-            <Sidebar show={show} setShow={setShow}/>
+            <Sidebar show={show} setShow={setShow} currState={currState} setCurrState={setCurrState}/>
             <div className={!show?"hamburger":"active"}>
                 <img src="\src\assets\hamburger.png" alt="" onClick={()=>setShow(true)}/>
             </div>

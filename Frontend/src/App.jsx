@@ -1,20 +1,21 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './App.css'
 import Header from './components/Header/header.jsx';
 import Home from './pages/Home/home.jsx';
 import { Route, Routes } from 'react-router-dom';
 import Requests from './pages/Requests/requests.jsx';
-import SidebarContext from './context/sidebarContext.js';
 
 function App() {
-  const{currState,setCurrState}=useContext(SidebarContext)
+  
+  const[currState,setCurrState]=useState("home")
+  const[show,setShow]=useState(false);
   return (
     <>
     <div className='app'>
-      <Header/>
+      <Header currState={currState} />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/requests' element={<Requests/>}/>
+        <Route path='/' element={<Home currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
+        <Route path='/requests' element={<Requests currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
       </Routes>
     </div>
     </>
