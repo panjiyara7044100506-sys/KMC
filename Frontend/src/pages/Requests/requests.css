@@ -1,0 +1,10 @@
+.requests{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    background-color: black;
+}
+.fixer{
+    position: relative;
+    background-color: red;
+    
+}

@@ -1,0 +1,18 @@
+# Ignore node_modules
+Backened/node_modules/
+Frontend/node_modules/
+
+# Environment variables
+Backened/.env
+Frontend/.env
+
+# Logs
+*.log
+
+# Build folders
+Backened/dist/
+Frontend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db

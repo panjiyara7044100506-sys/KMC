@@ -1,0 +1,234 @@
+
+.hamburger{
+    position: absolute;
+    left: 27px;
+    top: 1px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.home{
+    padding: 30px 20px 30px 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background-color: #f4f7f8;
+}
+.home a{
+    text-decoration: none;
+    color: black;
+}
+.home-top{
+    background-color: #FF5F1F;
+    border-radius: 10px;
+    padding: 30px 50px;
+}
+.home-top h2{
+font-size: 27px;
+margin-bottom: 5px;
+text-transform: capitalize;
+color: white;
+}
+.home-top p{
+   margin-bottom:25px ;
+   text-transform: capitalize;
+   color: #FFBF00;
+}
+.home-top-btn{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 20px;
+}
+.home-top-btn button{
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    background-color: white;
+    color: #FF5F1F;
+    gap: 5px;
+}
+.home-top-btn button span{
+    font-size: 20px;
+    
+}
+
+.home-middle{
+    display: grid;
+    grid-template-columns: minmax(0,1.65fr) minmax(270px,.8fr);
+    margin-top: 30px;
+    gap: 22px;
+}
+.home-middle-left{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #dce4e7;
+}
+.home-middle-left-heading{
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.home-middle-left-heading a{
+    padding: 0px 10px;
+    color:#FF5F1F;
+    font-size: 13px;
+    font-weight: 700;
+}
+.request{
+display: grid;
+grid-template-columns:50px 1fr  auto;
+gap: 12px;
+padding: 16px 0px;
+border-top: 1px solid #dce4e7;
+align-items: center;
+}
+
+.request-info p{
+color: #687784;
+font-size: 13px;
+}
+.icon{
+    padding: 15px;
+    background-color: #FFF5EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.request-status{
+    padding: 8px 16px;
+    background-color:#FFBF00;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.home-middle-right{
+border-radius: 10px;
+display: grid;
+gap: 20px;
+}
+.side{
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+border: 1px solid #dce4e7;
+}
+.side-heading{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.side-heading h3{
+    font-size: 19px;
+}
+.side-heading span{
+    font-weight: 700;
+    font-size: 14px;
+    color: #FF5F1F;
+}
+.side-content{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top:12px ;
+}
+.side-icon{
+    background-color: #FFE5B4;
+    padding: 7px 0px;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    width: 45px;
+    color: #FF5F1F;
+}
+.side-icon b{
+    display: block;
+    font-size: 18px;
+    line-height: 19px;
+    color: #FF5F1F;
+}
+.side-info p{
+    font-size: 13px;
+    color: #687784;
+}
+.side-alert-info{
+    padding: 1px 5px 1px 13px;
+    border-left: 4px solid yellow;
+    margin-top: 12px;
+}
+.side-alert-info strong{
+    font-size: 14px;
+}
+.side-alert-info p{
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.45;
+    color:#687784 ;
+}
+.home-bottom{
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin-top:30px ;
+gap: 12px;
+}
+.bottom-side{
+border-radius: 20px;
+padding: 40px 30px;
+text-transform: capitalize;
+}
+.bottom-side-one{
+    background-color: #FFC000;
+}
+.bottom-side-one h3{
+    margin-bottom: 10px;
+    color: white;
+}
+.bottom-side-one p{
+    margin-bottom: 5px;
+}
+.bottom-side-two{
+    background-color: #fff;
+    border: 1px solid #dce4e7;
+}
+.bottom-side-two a{
+    color: #FF5F1F;
+}
+.bottom-side-two p{
+    margin: 10px 0px;
+}
+.bottom-side h3{
+    font-size: 20px;
+}
+.bottom-side p{
+    font-size: 14px;
+    color: #687784;
+}
+.bottom-side button{
+    padding: 13px 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    background-color:#FF5F1F;
+    color: white;
+}

@@ -1,0 +1,108 @@
+.header{
+    background-color:#f4f7f8;
+    display: flex;
+    padding:10px 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+    box-sizing: border-box;
+   
+}
+
+.header-left-tag{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 80px;
+}
+.header-brand{
+    display: flex;
+    align-items: center;
+   
+}
+.gov-img{
+ width: 67px;
+ height: 67px;
+ 
+}
+.gov-img img{
+    object-fit:contain;
+  width:67px;
+  height: 67px;
+}
+.header-gov_title{
+    display: block;
+}
+.header-gov_title p{
+    font-size: 11px;
+    text-transform:uppercase;
+    font-weight: 700;
+    letter-spacing:.13em ;
+    color: #FF5F1F;
+}
+.header-gov_title h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.header-left{
+    display: block;
+    /* background-color: red; */
+    padding: 5px;
+    box-sizing: border-box;
+}
+.header-left p{
+    text-transform: uppercase;
+    color: #FF5F1F;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    margin: 0 0 5px;
+}
+.header-left h1{
+    text-transform: capitalize;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+.header-right{
+    display:flex;
+    /* background-color: yellow; */
+    gap: 12px;
+}
+.header-login_btn{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.header-login_btn a{
+    text-decoration: none;
+}
+.login-link{
+    padding: 10px 30px;
+    background-color: #FF5F1F;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    
+}
+.signup-link{
+ color: #FF5F1F;
+ font-size: 14px;
+ font-weight: 800;
+ text-transform: capitalize;
+}
+.emergency_btn{
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size:14px;
+    padding: 10px 20px;
+    font-weight: 800;
+}
