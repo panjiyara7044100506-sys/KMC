@@ -8,7 +8,8 @@ function Header() {
         "/requests":"requests portal",
         "/payments":"payments portal",
         "/permits":"permits portal",
-        "/community":"community portal"
+        "/community":"community portal",
+        "/reportIssue":"report issue"
     }
     const location = useLocation();
     return (

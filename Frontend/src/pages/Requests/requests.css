@@ -1,6 +1,78 @@
 .requests{
-    background-color: green;
-    display: flex;
+    background-color:#f4f7f8;
     position: relative;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.request-top{
+    background-color: #ffffff;
+    border: 1px solid #e0e7ea;
+    border-radius: 10px;
+    padding: 20px 30px;
+    max-height: 80vh;
+    overflow: auto;
+}
+.request-top h2{
+    font-size: 30px;
+    color: #fe6a2f;
+}
+.report-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+.report{
+    display: grid;
+    grid-template-columns:auto 1fr auto auto;
+    /* background-color: red; */
+    gap: 12px;
+    align-items: center;
+    padding:10px;
+    border-top: 1px solid #e0e7ea;
+}
+.report-icon{
+    padding: 15px;
+    font-size: 18px;
+    background-color: #fff5ee;
+    border-radius: 10px;
+}
+.report-info{
+    color: black;
+    text-transform: capitalize;
+}
+.report span{
+    background-color: #fff5d9;
+    padding: 11px 30px;
+    border-radius: 20px;
+    color:#ad8f43;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.report a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 16px;
+}
+.report p{
+    color:#909ba5 ;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.report button{
+    padding: 10px;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.report button:hover{
+    background-color: gold;
+}
+.report button img{
+    width: 20px;
+    height: 20px;
+    object-fit:cover;
+}
