@@ -4,6 +4,7 @@ import Header from './components/Header/header.jsx';
 import Home from './pages/Home/home.jsx';
 import { Route, Routes } from 'react-router-dom';
 import Requests from './pages/Requests/requests.jsx';
+import ReportIssue from './pages/ReportIssue/reportIssue.jsx';
 
 function App() {
   
@@ -14,8 +15,9 @@ function App() {
     <div className='app'>
       <Header/>
       <Routes>
-        <Route path='/' element={<Home currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
-        <Route path='/requests' element={<Requests currState={currState} setCurrState={setCurrState} show={show} setShow={setShow}/>}/>
+        <Route path='/' element={<Home show={show} setShow={setShow}/>}/>
+        <Route path='/requests' element={<Requests show={show} setShow={setShow}/>}/>
+        <Route path='/reportIssue' element={<ReportIssue show={show} setShow={setShow}/>}/>
       </Routes>
     </div>
     </>

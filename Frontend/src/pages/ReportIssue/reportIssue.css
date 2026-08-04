@@ -1,0 +1,121 @@
+.report-issue{
+    position: relative;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.report-issue-form-inputs{
+    text-transform: capitalize;
+    padding: 10px;
+    resize: vertical;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+.report-issue input:focus,textarea:focus{
+    outline: 2px solid #ff5f1f;
+}
+
+
+
+.report-issue-form-container{
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border: 1px solid #e0e7ea;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.report-issue-form-container h1{
+    margin-left: 10px;
+}
+.report-issue-form-container p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.report-issue-form{
+    display: flex;
+    flex-direction: column;
+}
+.report-issue-info{
+    /* background-color: red; */
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    border: 1px solid #ebf0f1;
+}
+
+.report-issue-form-h3{
+    font-size: 22px;
+}
+
+.report-issue-info label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 5px;
+    font-weight: 600;
+}
+
+.option{
+    width: 40%;
+}
+
+
+.report-issue-location-container{
+    /* background-color: blue; */
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    border: 1px solid #ebf0f1;
+}
+
+.report-issue-location{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* background-color: aquamarine; */
+    column-gap: 200px;
+    margin-top: 12px;
+}
+.report-issue-location label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    font-weight: 600;
+    gap: 5px;
+}
+.report-issue-location input{
+    text-transform: capitalize;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+
+.report-issue-userinfo-container{
+    /* background-color: yellow; */
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    border: 1px solid #ebf0f1;
+}
+
+.report-issue-userinfo{
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: red; */
+    column-gap: 12px;
+    
+}
+
+.report-issue-userinfo label{
+        display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    font-weight: 600;
+    gap: 5px;
+}

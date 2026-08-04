@@ -4,7 +4,7 @@ import './sidebar.css'
 import { NavLink } from "react-router-dom";
 
 
-function Sidebar({show,setShow,currState,setCurrState}){
+function Sidebar({show,setShow}){
     const Item = [
         {id:1,label:"home",icon:"⌂",path:"/"},
         {id:2,label:"report Issue",icon:"#",path:"/reportIssue"},
@@ -21,7 +21,7 @@ function Sidebar({show,setShow,currState,setCurrState}){
             <div className="sidebar-nav">
                 {Item.map((item)=>{
                     return(
-                        <NavLink to={item.path} id={item.id} className={({isActive})=>isActive?"active-nav sidebar-nav":"sidebar-nav"} onClick={()=>setCurrState(item.label)}>
+                        <NavLink to={item.path} id={item.id} className={({isActive})=>isActive?"active-nav sidebar-nav":"sidebar-nav"} onClick={()=>setShow(false)}>
                             {item.icon}
                             <span>{item.label}</span>
                         </NavLink>
