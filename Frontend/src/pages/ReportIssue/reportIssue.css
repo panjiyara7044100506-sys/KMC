@@ -26,36 +26,45 @@
 }
 .report-issue-form-container h1{
     margin-left: 10px;
+    color: #ff5f1f;
 }
 .report-issue-form-container p{
     font-size: 14px;
     font-weight: 600;
     margin-left: 15px;
+    color: #9ba5ad;
 }
 
 .report-issue-form{
     display: flex;
     flex-direction: column;
 }
-.report-issue-info{
-    /* background-color: red; */
+.report-issue-info{                    
     padding: 20px 30px;
     border-radius: 10px;
     text-transform: capitalize;
-    margin-top: 10px;
-    border: 1px solid #ebf0f1;
+    margin-top: 30px;
+    /* border: 1px solid #ebf0f1; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .report-issue-form-h3{
     font-size: 22px;
 }
 
-.report-issue-info label{
+.report-issue-info label{   
     display: flex;
     flex-direction: column;
     margin-top: 12px;
     gap: 5px;
     font-weight: 600;
+}
+
+.report-issue-info-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    margin-top: 12px;
 }
 
 .option{
@@ -68,8 +77,9 @@
     padding: 20px 30px;
     border-radius: 10px;
     text-transform: capitalize;
-    margin-top: 10px;
-    border: 1px solid #ebf0f1;
+    margin-top: 30px;
+    /* border: 1px solid #ebf0f1; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .report-issue-location{
@@ -99,8 +109,9 @@
     padding: 20px 30px;
     border-radius: 10px;
     text-transform: capitalize;
-    margin-top: 10px;
-    border: 1px solid #ebf0f1;
+    margin-top: 30px;
+    /* border: 1px solid #ebf0f1; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .report-issue-userinfo{
@@ -118,4 +129,9 @@
     margin-top: 12px;
     font-weight: 600;
     gap: 5px;
+}
+
+.report-issue-form button:hover{
+    outline: 2px solid gold !important;
+    outline-offset: -6px !important;
 }
