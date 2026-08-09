@@ -5,6 +5,7 @@ import Home from './pages/Home/home.jsx';
 import { Route, Routes } from 'react-router-dom';
 import Requests from './pages/Requests/requests.jsx';
 import ReportIssue from './pages/ReportIssue/reportIssue.jsx';
+import Payment from './pages/payments/payment.jsx';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home show={show} setShow={setShow}/>}/>
         <Route path='/requests' element={<Requests show={show} setShow={setShow}/>}/>
         <Route path='/reportIssue' element={<ReportIssue show={show} setShow={setShow}/>}/>
+        <Route path='/payments' element={<Payment show={show} setShow={setShow}/>}/>
       </Routes>
     </div>
     </>

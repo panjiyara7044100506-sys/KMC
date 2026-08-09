@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import './home.css'
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
+import Hamburger from "../../components/Hamburger/Hamburger.jsx";
 
 function Home({show,setShow}){    
     return(
         <div className="home">
             <Sidebar show={show} setShow={setShow}/>
-            <div className={!show?"hamburger":"active"}>
-                <img src="\src\assets\hamburger.png" alt="" onClick={()=>setShow(true)}/>
-            </div>
+            <Hamburger show={show} setShow={setShow}/>
             <div className="home-top">
                 <h2>how can we help today</h2>
                 <p>Access essential city services quickly and track every request in one place.</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import './requests.css'
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
+import Hamburger from "../../components/Hamburger/Hamburger.jsx";
 
 function Requests({ show, setShow }) {
     const reports = [
@@ -12,9 +13,7 @@ function Requests({ show, setShow }) {
     return (
         <div className="requests">
             <Sidebar show={show} setShow={setShow} />
-            <div className={!show ? "hamburger" : "active"}>
-                <img src="\src\assets\hamburger.png" alt="" onClick={() => setShow(true)} />
-            </div>
+            <Hamburger show={show} setShow={setShow}/>
             <div className="request-top">
                 {reports.length===0?<div className="report-empty" style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
                     <h1>No Report Available</h1>
