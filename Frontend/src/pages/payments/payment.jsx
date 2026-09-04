@@ -173,63 +173,8 @@ function Payment({show,setShow}){
             <Sidebar show={show} setShow={setShow}/>
             <Hamburger show={show} setShow={setShow}/>
             <div className="payment-info">
-                
-                {/* Left side - Payment information */}
-                <div className="payment-left">
-
-                    <h1>Complete your payment</h1>
-
-                    <p className="subtitle">
-                        Choose your preferred payment method
-                    </p>
-
-                    {/* Payment methods preview */}
-                    <div className="payment-methods">
-
-                        <div className={`payment-method ${selectedMethod==="card"?"active":""}`} onClick={()=>setSelectedMethod("card")}>
-                            <div className="method-icon">💳</div>
-
-                            <div>
-                                <h3>Cards</h3>
-                                <p>Credit / Debit Card</p>
-                            </div>
-                        </div>
-
-                        <div className={`payment-method ${selectedMethod==="upi"?"active":""}`} onClick={()=>setSelectedMethod("upi")}>
-                            <div className="method-icon">📱</div>
-
-                            <div>
-                                <h3>UPI</h3>
-                                <p>Google Pay, PhonePe, Paytm</p>
-                            </div>
-                        </div>
-
-                        <div className={`payment-method ${selectedMethod==="netbanking"?"active":""}`} onClick={()=>setSelectedMethod("netbanking")}>
-                            <div className="method-icon">🏦</div>
-
-                            <div>
-                                <h3>Net Banking</h3>
-                                <p>All major banks</p>
-                            </div>
-                        </div>
-
-                        <div className={`payment-method ${selectedMethod==="wallet"?"active":""}`} onClick={()=>setSelectedMethod("wallet")}>
-                            <div className="method-icon">👛</div>
-
-                            <div>
-                                <h3>Wallets</h3>
-                                <p>Available wallets</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
                 {/* Right side - Order summary */}
-                <div className="payment-right">
-
+                
                     <div className="order-card">
 
                         <h2>Order Summary</h2>
@@ -278,8 +223,6 @@ function Payment({show,setShow}){
                         </p>
 
                     </div>
-
-                </div>
             </div>
         </div>
     )

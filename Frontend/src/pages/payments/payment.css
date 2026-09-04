@@ -102,20 +102,15 @@
 
 /* RIGHT */
 
-.payment-right {
+/* .payment-right {
     background: #f8f9fb;
 
     padding: 35px;
-}
+} */
 
 .order-card {
     background: white;
-
-    border-radius: 12px;
-
     padding: 28px;
-
-    border: 1px solid #eee;
 }
 
 .order-card h2 {
