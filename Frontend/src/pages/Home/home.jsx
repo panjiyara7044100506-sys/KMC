@@ -3,7 +3,13 @@ import './home.css'
 import Sidebar from "../../components/Sidebar/sidebar.jsx";
 import Hamburger from "../../components/Hamburger/Hamburger.jsx";
 
-function Home({show,setShow}){    
+function Home({show,setShow}){
+    
+    function visit(event){
+        const name = event.currentTarget.getAttribute('name');
+        console.log(name)
+        window.location.href=`/${name}`
+    }
     return(
         <div className="home">
             <Sidebar show={show} setShow={setShow}/>
@@ -12,8 +18,8 @@ function Home({show,setShow}){
                 <h2>how can we help today</h2>
                 <p>Access essential city services quickly and track every request in one place.</p>
                 <div className="home-top-btn">
-                    <button><span>⚑</span>report an issue</button>
-                    <button><span>◉</span>pay bills</button>
+                    <button name="reportIssue" onClick={visit}><span>⚑</span>report an issue</button>
+                    <button name="payments" onClick={visit}><span>◉</span>pay bills</button>
                     <button><span>▧</span>apply for permits</button>
                     <button><span>◷</span>book appoinments</button>
                 </div>

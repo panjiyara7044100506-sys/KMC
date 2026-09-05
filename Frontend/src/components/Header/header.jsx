@@ -1,6 +1,7 @@
 import React from "react";
 import './header.css'
 import { NavLink, useLocation } from "react-router-dom";
+import { useUser } from "../../context/userProvider.jsx";
 
 function Header() {
     const heading={
@@ -12,6 +13,8 @@ function Header() {
         "/reportIssue":"report issue"
     }
     const location = useLocation();
+
+    const{userData} = useUser();
     return (
         <div className="header">
             <div className="header-left-tag">
@@ -31,10 +34,13 @@ function Header() {
                 </div>
             </div>
             <div className="header-right">
+                {userData===null?
                 <div className="header-login_btn">
                     <a className="signup-link" href="">sign up</a>
-                    <a className="login-link" href="">login</a>
-                </div>
+                    <a className="login-link" href="/login">login</a>
+                </div>:
+                <div className="header-login-profile" style={{borderRadius:"50%",color:"black",backgroundColor:"orange",width:"40px",display:"flex",justifyContent:"center",alignItems:"center"}}>S</div>
+                }
                 <button className="emergency_btn">emergency 112</button>
             </div>
         </div>

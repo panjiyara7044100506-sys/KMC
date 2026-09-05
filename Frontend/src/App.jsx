@@ -6,10 +6,10 @@ import { Route, Routes } from 'react-router-dom';
 import Requests from './pages/Requests/requests.jsx';
 import ReportIssue from './pages/ReportIssue/reportIssue.jsx';
 import Payment from './pages/payments/payment.jsx';
+import Login from './pages/Login/login.jsx';
 
 function App() {
   
-  const[currState,setCurrState]=useState("home")
   const[show,setShow]=useState(false);
   return (
     <>
@@ -20,6 +20,7 @@ function App() {
         <Route path='/requests' element={<Requests show={show} setShow={setShow}/>}/>
         <Route path='/reportIssue' element={<ReportIssue show={show} setShow={setShow}/>}/>
         <Route path='/payments' element={<Payment show={show} setShow={setShow}/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </div>
     </>
