@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './login.css'
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
@@ -7,8 +7,10 @@ import { useUser } from "../../context/userProvider.jsx";
 
 function Login() {
     const navigate = useNavigate();
-    const {userData, setUserData } = useUser();
+    const {setUserData } = useUser();
     const [loading, setloading] = useState(false);
+const[errorMsg,setErrorMsg]=useState(null);
+
     const[data,setData]=useState({
         email:"",
         password:""
@@ -25,21 +27,20 @@ function Login() {
         setloading(true)
         try {
             const result = await axios.post("http://localhost:3000/api/users/login", data)
-            console.log(result.data);
 
             if (result.data.success) {
-                setUserData(result.data)
-                console.log(result.data.user.name)
+                setUserData(result.data.user)
                 navigate('/');
-
+                
                 setData({
                     email: "",
                     password: ""
                 });
+
+                
             }
-        } catch(err){
-            // console.log(err);
-            window.alert(err.response?.data?.message || "something went wrong");
+        } catch(error){
+                  setErrorMsg({success:error.response.data.success,message:error.response.data.message});
         } finally {
             setloading(false);
         }
@@ -56,6 +57,7 @@ function Login() {
                 <input type="password" name="password" value={data.password} onChange={handleOnChange} />
             </label>
             <label htmlFor="submit">submit<button onClick={handleSubmit}>submit</button></label>
+            {errorMsg!== null?<p>{errorMsg.message}</p>:null}
         </div>
     )
 }

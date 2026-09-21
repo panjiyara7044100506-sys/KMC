@@ -23,15 +23,15 @@ export async function loginUser(req,res) {
     const{email,password}=req.body;
     try{
         const User = await db.query('SELECT * FROM users WHERE email=$1',[email]);
-        if(User.rows.length === 0) return res.json({success:false,message:"no user found"})
+        if(User.rows.length === 0) return res.status(404).json({success:false,message:"no user found"})
         
         const match = await bcrypt.compare(password,User.rows[0].password);
-        if(!match) return res.json({success:false,message:"invalid email or password"});
+        if(!match) return res.status(400).json({success:false,message:"invalid email or password"});
         
         const token = await generateToken(User.rows[0]);
         res.setHeader("Authorization",`Bearer ${token}`)
 
-        return res.json({success:true,message:"login successfull",user:User.rows[0],token:token});
+        return res.status(200).json({success:true,message:"login successfull",user:User.rows[0],token:token});
     }catch(err){
         console.log(err);
         return res.json(err);

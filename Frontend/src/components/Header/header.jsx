@@ -39,7 +39,7 @@ function Header() {
                     <a className="signup-link" href="">sign up</a>
                     <a className="login-link" href="/login">login</a>
                 </div>:
-                <div className="header-login-profile" style={{borderRadius:"50%",color:"black",backgroundColor:"orange",width:"40px",display:"flex",justifyContent:"center",alignItems:"center"}}>S</div>
+                <div className="header-login-profile" style={{borderRadius:"50%",color:"black",backgroundColor:"orange",width:"40px",display:"flex",justifyContent:"center",alignItems:"center"}}>{userData.name}</div>
                 }
                 <button className="emergency_btn">emergency 112</button>
             </div>
