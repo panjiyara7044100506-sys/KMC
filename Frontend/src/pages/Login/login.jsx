@@ -7,13 +7,13 @@ import { useUser } from "../../context/userProvider.jsx";
 
 function Login() {
     const navigate = useNavigate();
-    const {setUserData } = useUser();
-    const [loading, setloading] = useState(false);
-const[errorMsg,setErrorMsg]=useState(null);
+    const { setUserData ,loading,setloading} = useUser();
+    
+    const [errorMsg, setErrorMsg] = useState(null);
 
-    const[data,setData]=useState({
-        email:"",
-        password:""
+    const [data, setData] = useState({
+        email: "",
+        password: ""
     })
     function handleOnChange(e) {
         const { name, value } = e.target;
@@ -31,33 +31,33 @@ const[errorMsg,setErrorMsg]=useState(null);
             if (result.data.success) {
                 setUserData(result.data.user)
                 navigate('/');
-                
+
                 setData({
                     email: "",
                     password: ""
                 });
+                localStorage.setItem("token", result.data.token);
 
-                
             }
-        } catch(error){
-                  setErrorMsg({success:error.response.data.success,message:error.response.data.message});
+        } catch (error) {
+            setErrorMsg({ success: error.response.data.success, message: error.response.data.message });
         } finally {
             setloading(false);
         }
     }
     return (
         <div className="login-container">
-            {loading? <div className="loader"></div> : null}
-            <label htmlFor="email">
-                Email
-                <input type="email" name="email" value={data.email} onChange={handleOnChange} />
-            </label>
-            <label htmlFor="pasword">
-                password
-                <input type="password" name="password" value={data.password} onChange={handleOnChange} />
-            </label>
-            <label htmlFor="submit">submit<button onClick={handleSubmit}>submit</button></label>
-            {errorMsg!== null?<p>{errorMsg.message}</p>:null}
+            <div className="login-content">
+                {loading ? <div className="loader"></div> : null}
+                <label htmlFor="email">
+                    <input type="email" name="email" value={data.email} onChange={handleOnChange} placeholder="Email"/>
+                </label>
+                <label htmlFor="pasword">
+                    <input type="password" name="password" value={data.password} onChange={handleOnChange} placeholder="Password"/>
+                </label>
+                <label htmlFor="submit"><button onClick={handleSubmit}>login</button></label>
+                {errorMsg !== null ? <p>{errorMsg.message}</p> : null}
+            </div>
         </div>
     )
 }

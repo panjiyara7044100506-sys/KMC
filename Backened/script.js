@@ -28,6 +28,7 @@ app.use('/api/admin',adminRouter)
 app.use('/api/authority',authorityRouter)
 app.use('/api/payment',PaymentRouter)
 
+
 //test_server run
 app.get('/',(req,res)=>{
     res.send("hello");

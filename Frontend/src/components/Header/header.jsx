@@ -4,17 +4,10 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useUser } from "../../context/userProvider.jsx";
 
 function Header() {
-    const heading={
-        "/":"good morning, alex",
-        "/requests":"requests portal",
-        "/payments":"payments portal",
-        "/permits":"permits portal",
-        "/community":"community portal",
-        "/reportIssue":"report issue"
-    }
     const location = useLocation();
 
     const{userData} = useUser();
+    console.log(userData)
     return (
         <div className="header">
             <div className="header-left-tag">
@@ -30,7 +23,8 @@ function Header() {
                 </div></a>
                 <div className="header-left">
                     <p>citizen portal</p>
-                    <h1>{heading[location.pathname]}</h1>
+                    {location.pathname === '/'?<h1>good morning {userData!=null? userData.name:null}</h1>:<h1>{location.pathname.split("/")[1]}</h1>}
+                    
                 </div>
             </div>
             <div className="header-right">

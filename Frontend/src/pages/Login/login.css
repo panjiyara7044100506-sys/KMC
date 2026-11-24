@@ -15,13 +15,65 @@
         transform: rotate(360deg);
     }
 }
+
+
 .login-container{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  height: 88vh;
+   background: linear-gradient(135deg, #FF5F1F 0%, #FFC000 100%);
+}
+.login-content{
   padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  gap: 10px;
-  background-color: orange;
+  gap: 20px;
+      /* 1. Semi-transparent background */
+    background: rgba(255, 255, 255, 0.15);
+    
+    /* 2. Frosted blur effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    
+    /* 3. Thin glass-edge border */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* 4. Soft depth shadow & rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+.login-content input{
+    width: 20vw;
+    padding:15px 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.login-content input::placeholder{
+    font-size:16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-content button{
+        padding: 10px 30px;
+        border-radius: 5px;
+        border:none;
+        outline: none;
+        background-color: #FF5F1F;
+        color: white;
+        text-transform:capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-content p{
+    font-size:14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    position: absolute;
+    bottom: 8px;
 }
